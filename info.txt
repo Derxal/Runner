@@ -1,0 +1,11 @@
+docker run -d -it -p 8091:80 --name server ubuntu
+
+docker exec -it server bash
+    apt update
+    apt install nginx
+    apt install nano
+
+
+
+
+    
