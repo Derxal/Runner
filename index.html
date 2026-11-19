@@ -1,5 +1,91 @@
-<h1>ho,fdjslfj asf </h1>
-<h1>ho,fdjslfj asf </h1>
-<h1>ho,fdjslfj asf </h1>
-<h1>ho,fdjslfj asf </h1>
-<h1>ho,fdjslfj asf </h1>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Random</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #00e5ff;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #00e5ff;
+            color: #111;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #00bcd4;
+        }
+
+        #mensaje {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🚀 Página Random</h1>
+        <p>Bienvenido a mi página web.</p>
+
+        <button onclick="cambiarMensaje()">
+            ¡Haz clic aquí!
+        </button>
+
+        <div id="mensaje">
+            Presiona el botón 👀
+        </div>
+    </div>
+
+    <script>
+        const mensajes = [
+            "¡Hola, mundo! 🌎",
+            "Nunca dejes de aprender 🚀",
+            "JavaScript es divertido 💻",
+            "Hoy será un gran día 😎",
+            "Git push exitoso 🔥",
+            "Sigue programando ⚡"
+        ];
+
+        function cambiarMensaje() {
+            const random = Math.floor(
+                Math.random() * mensajes.length
+            );
+
+            document.getElementById("mensaje").innerText =
+                mensajes[random];
+        }
+    </script>
+
+</body>
+</html>
