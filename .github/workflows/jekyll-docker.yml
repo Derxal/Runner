@@ -19,5 +19,11 @@ jobs:
     - name: Saludar
       run: echo Hola mundo
 
+    - name: instalar librerias
+      run: npm ci
+
+    - name: Testing
+      run: npm test
+
     
       
