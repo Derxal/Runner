@@ -7,11 +7,17 @@ on:
 jobs:
   despliegue:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
     - name: Copiar mis arcrivos al contenedor
-      run: |
-        rm -R /var/www/html/*
-        cp ./* /var/www/html
+      uses: actions/checkout@v4
+    
+    - name: instalar node
+      uses: actions/setup-node@v7
+
+    - name: Saludar
+      run: echo Hola mundo
+
+    
+      

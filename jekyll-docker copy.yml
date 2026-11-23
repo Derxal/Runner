@@ -1,0 +1,17 @@
+name: Mi Servidor
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  despliegue:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Copiar mis arcrivos al contenedor
+      run: |
+        rm -R /var/www/html/*
+        cp ./* /var/www/html
