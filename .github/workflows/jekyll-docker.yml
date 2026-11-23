@@ -25,5 +25,18 @@ jobs:
     - name: Testing
       run: npm test
 
-    
-      
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: contruicción de los archivos
+        run: sleep 5
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Desplegar archivos
+        run: sleep 5
